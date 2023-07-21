@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: countries-be
+  profiles:
+    active: dev
