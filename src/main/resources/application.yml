@@ -3,3 +3,6 @@ spring:
     name: countries-be
   profiles:
     active: dev
+
+server:
+  port: 8181
