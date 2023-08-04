@@ -33,3 +33,5 @@ build/
 .vscode/
 
 /docker/postgresql/data
+
+/log
