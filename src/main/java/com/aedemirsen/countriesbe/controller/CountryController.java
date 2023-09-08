@@ -30,5 +30,9 @@ public class CountryController {
 
 
     //// 3
+    @GetMapping
+    public List<Country> getAllCountries(String s){
+        return countryService.getAllCountries();
+    }
 
 }
