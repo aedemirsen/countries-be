@@ -6,6 +6,7 @@ import com.aedemirsen.countriesbe.service.interfaces.ICountryService;
 import com.aedemirsen.countriesbe.util.constants.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +22,11 @@ public class CountryController {
     @GetMapping
     public List<Country> getAllCountries(){
         return countryService.getAllCountries();
+    }
+
+    @PostMapping(Api.Country.INSERT_ALL)
+    public List<Country> insertCountries(){
+        return countryService.insertCountries();
     }
 
 }

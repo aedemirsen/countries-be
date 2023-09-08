@@ -1,6 +1,7 @@
 package com.aedemirsen.countriesbe.service.impl;
 
 import com.aedemirsen.countriesbe.entity.Country;
+import com.aedemirsen.countriesbe.initializer.CountryInitializer;
 import com.aedemirsen.countriesbe.repository.ICountryRepository;
 import com.aedemirsen.countriesbe.service.interfaces.ICountryService;
 import lombok.RequiredArgsConstructor;
@@ -17,5 +18,10 @@ public class CountryService implements ICountryService {
     @Override
     public List<Country> getAllCountries() {
         return countryRepository.findAll();
+    }
+
+    @Override
+    public List<Country> insertCountries() {
+        return countryRepository.saveAll(CountryInitializer.readCountries());
     }
 }
