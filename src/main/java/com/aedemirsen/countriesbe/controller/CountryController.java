@@ -24,7 +24,10 @@ public class CountryController {
     }
 
     //// 1
-
+    @GetMapping
+    public Country getCountry(long id){
+        return null;
+    }
 
     //// 2
     @GetMapping
