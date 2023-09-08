@@ -27,6 +27,10 @@ public class CountryController {
 
 
     //// 2
+    @GetMapping
+    public Country getCountry(){
+        return null;
+    }
 
 
     //// 3
