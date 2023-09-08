@@ -8,4 +8,6 @@ public interface ICountryService {
 
     List<Country> getAllCountries();
 
+    List<Country> insertCountries();
+
 }

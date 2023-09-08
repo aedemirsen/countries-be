@@ -1,26 +1,33 @@
 package com.aedemirsen.countriesbe.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Country {
 
     @Id
-    private String id;
+    @GeneratedValue
+    @Column(unique = true)
+    private Long id;
+    private String code;
     private String name;
     private String nativeName;
     private int phone;
     private String capital;
     private String continent;
     private String currency;
-   // private List<Language> languages;
+    private String language;
+    private String flag;
+
+    // private List<Language> languages;
 
 }
