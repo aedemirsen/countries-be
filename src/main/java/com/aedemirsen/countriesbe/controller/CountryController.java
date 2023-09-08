@@ -23,23 +23,4 @@ public class CountryController {
         return countryService.getAllCountries();
     }
 
-    //// 1
-    @GetMapping
-    public Country getCountry(long id){
-        return null;
-    }
-
-    //// 2
-    @GetMapping
-    public Country getCountry(){
-        return null;
-    }
-
-
-    //// 3
-    @GetMapping
-    public List<Country> getAllCountries(String s){
-        return countryService.getAllCountries();
-    }
-
 }
