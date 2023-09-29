@@ -34,4 +34,4 @@ build/
 
 /docker/postgresql/data
 
-/log
+log
