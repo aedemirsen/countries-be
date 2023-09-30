@@ -10,4 +10,6 @@ public interface ICountryService {
 
     List<Country> insertCountries();
 
+    Country insertCountry(Country country);
+
 }
