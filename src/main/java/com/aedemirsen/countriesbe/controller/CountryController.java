@@ -1,14 +1,13 @@
 package com.aedemirsen.countriesbe.controller;
 
+import com.aedemirsen.countriesbe.dto.CountryDto;
 import com.aedemirsen.countriesbe.entity.Country;
-import com.aedemirsen.countriesbe.service.impl.CountryService;
+import com.aedemirsen.countriesbe.mapper.ICountryMapper;
 import com.aedemirsen.countriesbe.service.interfaces.ICountryService;
 import com.aedemirsen.countriesbe.util.constants.Api;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,9 +18,19 @@ public class CountryController {
 
     private final ICountryService countryService;
 
+    private final ICountryMapper countryMapper;
+
+
     @GetMapping
     public List<Country> getAllCountries(){
         return countryService.getAllCountries();
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<CountryDto> insertCountry(@RequestBody CountryDto countryDto){
+        Country mappedCountry = countryMapper.toCountry(countryDto);
+        Country country = countryService.insertCountry(mappedCountry);
+        return ResponseEntity.ok(countryMapper.fromCountry(country));
     }
 
     @PostMapping(Api.Country.INSERT_ALL)
