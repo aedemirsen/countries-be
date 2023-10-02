@@ -15,7 +15,7 @@ public class CacheController {
 
     private final ICacheService cacheService;
 
-    @GetMapping(Api.Cache.EVICT_COUNTRY_NAMES)
+    @DeleteMapping(Api.Cache.EVICT_COUNTRY_NAMES)
     public Boolean evictCountryNamesCache() {
         cacheService.evictCacheValues(CacheNames.COUNTRY_NAMES);
         return true;

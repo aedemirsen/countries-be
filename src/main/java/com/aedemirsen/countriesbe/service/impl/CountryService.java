@@ -39,7 +39,7 @@ public class CountryService implements ICountryService {
 
     @Caching(
             evict = {
-                    @CacheEvict(value = CacheNames.COUNTRY_NAMES, condition = "#country.code != null")
+                    @CacheEvict(value = CacheNames.COUNTRY_NAMES, allEntries = true, condition = "#country.code != null")
             }
     )
     @Override
