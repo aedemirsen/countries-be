@@ -14,3 +14,8 @@ services:
       - ${POSTGRES_PORT}:5432
     volumes:
       - ./postgresql/data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

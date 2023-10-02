@@ -20,17 +20,21 @@ public class CountryController {
 
     private final ICountryMapper countryMapper;
 
-
     @GetMapping
     public List<Country> getAllCountries(){
         return countryService.getAllCountries();
     }
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<CountryDto> insertCountry(@RequestBody CountryDto countryDto){
         Country mappedCountry = countryMapper.toCountry(countryDto);
         Country country = countryService.insertCountry(mappedCountry);
         return ResponseEntity.ok(countryMapper.fromCountry(country));
+    }
+
+    @GetMapping(Api.Country.COUNTRY_NAMES)
+    public List<String> getAllCountryNames(){
+        return countryService.getAllCountryNames();
     }
 
     @PostMapping(Api.Country.INSERT_ALL)

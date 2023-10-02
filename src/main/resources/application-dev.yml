@@ -10,3 +10,17 @@ spring:
     properties:
       hibernate:
         show_sql: false
+
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+
+cache:
+  config:
+    entryTtl: 60
+    countryNames:
+      entryTtl: 30
+
+

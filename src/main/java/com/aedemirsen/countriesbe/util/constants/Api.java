@@ -12,6 +12,18 @@ public class Api {
 
         public static final String INSERT_ALL = "/insert_all";
 
+        public static final String COUNTRY_NAMES = "/names";
+
+
+    }
+
+    @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    public static class Cache{
+        public static final String BASE_URL = "/cache";
+
+        public static final String EVICT_COUNTRY_NAMES = "/names/evict";
+
+
     }
 
 }
