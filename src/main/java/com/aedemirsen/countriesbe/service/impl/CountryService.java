@@ -36,7 +36,10 @@ public class CountryService implements ICountryService {
     }
 
     //Get Country By ID
-
+    @Override
+    public Country findById(Long id){
+        return countryRepository.findById(id).orElse(null);
+    }
 
 
     //Get Countries By Continent

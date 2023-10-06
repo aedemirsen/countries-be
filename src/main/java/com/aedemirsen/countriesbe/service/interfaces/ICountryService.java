@@ -13,7 +13,7 @@ public interface ICountryService {
     Country insertCountry(Country country);
 
     //Get Country By ID
-
+    Country findById(Long id);
 
 
     //Get Countries By Continent

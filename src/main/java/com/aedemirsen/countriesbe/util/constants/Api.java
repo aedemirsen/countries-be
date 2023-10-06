@@ -13,7 +13,7 @@ public class Api {
         public static final String INSERT_ALL = "/insert_all";
 
         //Get Country By ID
-
+        public static final String GET_BY_ID = "/{countryId}";
 
 
         //Get Countries By Continent

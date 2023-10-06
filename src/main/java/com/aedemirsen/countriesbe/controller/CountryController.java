@@ -39,7 +39,10 @@ public class CountryController {
     }
 
     //Get Country By ID
-
+    @GetMapping(Api.Country.GET_BY_ID)
+    public CountryDto getCountry(@PathVariable("countryId") Long id){
+        return countryMapper.fromCountry(countryService.findById(id));
+    }
 
 
     //Get Countries By Continent
