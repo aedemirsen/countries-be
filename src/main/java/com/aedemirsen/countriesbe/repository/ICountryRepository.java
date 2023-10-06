@@ -11,4 +11,20 @@ public interface ICountryRepository extends JpaRepository<Country,String> {
 
     Optional<Country> findByCode(String code);
 
+    //Get Country By ID
+
+
+
+    //Get Countries By Continent
+
+
+    //Get Countries By phone code
+
+
+    //Get country by name
+
+
+
+    //Get countries by currency
+
 }
