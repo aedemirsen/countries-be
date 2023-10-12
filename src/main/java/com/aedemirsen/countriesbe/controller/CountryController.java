@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
@@ -43,7 +44,12 @@ public class CountryController {
 
 
     //Get Countries By Continent
-
+    @GetMapping(Api.Country.GET_BY_CONTINENT)
+    public List<CountryDto> getCountriesByContinent(@PathVariable("continentName") String continentName){
+        List<Country> countries = countryService.getCountriesByContinent(continentName);
+        List<CountryDto> resposeList = countries.stream().map(country -> countryMapper.fromCountry(country)).collect(Collectors.toList());
+        return resposeList;
+    }
 
     //Get Countries By phone code
 

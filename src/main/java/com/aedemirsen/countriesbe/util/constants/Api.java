@@ -17,7 +17,7 @@ public class Api {
 
 
         //Get Countries By Continent
-
+        public static final String GET_BY_CONTINENT = "/{continentName}";
 
         //Get Countries By phone code
 

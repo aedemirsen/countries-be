@@ -40,7 +40,10 @@ public class CountryService implements ICountryService {
 
 
     //Get Countries By Continent
-
+    @Override
+    public List<Country> getCountriesByContinent(String continentName){
+           return countryRepository.findByContinent(continentName).orElse(null);
+    }
 
     //Get Countries By phone code
 

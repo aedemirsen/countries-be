@@ -17,7 +17,7 @@ public interface ICountryService {
 
 
     //Get Countries By Continent
-
+    List<Country> getCountriesByContinent(String continentName);
 
     //Get Countries By phone code
 
