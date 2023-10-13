@@ -52,6 +52,10 @@ public class CountryController {
 
 
 
-    //Get countries by currency
-
+    //Get countries by currency,
+    @GetMapping(Api.Country.GET_BY_CURRENCY)
+    public CountryDto getCountry(@PathVariable("countryCurrency")String currency)
+    {
+        return countryMapper.fromCountry(countryService.findByCurrency(currency));
+    }
 }

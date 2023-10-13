@@ -11,6 +11,8 @@ public interface ICountryRepository extends JpaRepository<Country,String> {
 
     Optional<Country> findByCode(String code);
 
+
+
     //Get Country By ID
 
 
@@ -26,5 +28,5 @@ public interface ICountryRepository extends JpaRepository<Country,String> {
 
 
     //Get countries by currency
-
+    Optional<Country> findByCurrency(String currency);
 }

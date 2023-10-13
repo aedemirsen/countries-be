@@ -12,6 +12,8 @@ public interface ICountryService {
 
     Country insertCountry(Country country);
 
+
+
     //Get Country By ID
 
 
@@ -27,5 +29,5 @@ public interface ICountryService {
 
 
     //Get countries by currency
-
+    Country findByCurrency(String currency);
 }

@@ -27,6 +27,7 @@ public class Api {
 
 
         //Get countries by currency
+        public static  final String GET_BY_CURRENCY = "/{currency}";
 
     }
 

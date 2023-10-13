@@ -35,6 +35,7 @@ public class CountryService implements ICountryService {
 
     }
 
+
     //Get Country By ID
 
 
@@ -50,5 +51,8 @@ public class CountryService implements ICountryService {
 
 
     //Get countries by currency
-
+    @Override
+    public Country findByCurrency(String currency) {
+        return countryRepository.findByCurrency(currency).orElse(null);
+    }
 }
