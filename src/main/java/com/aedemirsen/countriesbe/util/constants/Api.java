@@ -12,22 +12,6 @@ public class Api {
 
         public static final String INSERT_ALL = "/insert_all";
 
-        //Get Country By ID
-
-
-
-        //Get Countries By Continent
-
-
-        //Get Countries By phone code
-
-
-        //Get country by name
-
-
-
-        //Get countries by currency
-
     }
 
 }

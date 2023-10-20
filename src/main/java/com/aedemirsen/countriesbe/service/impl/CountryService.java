@@ -29,26 +29,11 @@ public class CountryService implements ICountryService {
     @Override
     public Country insertCountry(Country country) {
         //gelen ülke koduna sahip başka bir ülke var mı?
-        Country existingCountry = countryRepository.findByCode(country.getCode())
-                .orElseThrow(() -> new CountryAlreadyExistsException("Bu koda sahip bir ülke daha önce eklenmiş!"));
+        Country existingCountry = countryRepository.findByCode(country.getCode()).orElse(null);
+        if(existingCountry != null){
+            throw new CountryAlreadyExistsException();
+        }
         return countryRepository.save(country);
-
     }
-
-    //Get Country By ID
-
-
-
-    //Get Countries By Continent
-
-
-    //Get Countries By phone code
-
-
-    //Get country by name
-
-
-
-    //Get countries by currency
 
 }
