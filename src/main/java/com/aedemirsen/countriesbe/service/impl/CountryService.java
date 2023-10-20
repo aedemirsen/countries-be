@@ -43,7 +43,10 @@ public class CountryService implements ICountryService {
 
 
     //Get Countries By phone code
-
+    @Override
+    public List<Country> getCountriesByPhoneCode(String phoneCode) {
+        return countryRepository.findByPhoneCode(phoneCode);
+    }
 
     //Get country by name
 

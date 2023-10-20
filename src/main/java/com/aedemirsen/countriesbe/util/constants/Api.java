@@ -20,7 +20,7 @@ public class Api {
 
 
         //Get Countries By phone code
-
+        public static final String GET_BY_PHONE_CODE = "/phone_code";
 
         //Get country by name
 

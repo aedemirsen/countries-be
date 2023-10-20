@@ -20,7 +20,7 @@ public interface ICountryService {
 
 
     //Get Countries By phone code
-
+    List<Country> getCountriesByPhoneCode(String phoneCode);
 
     //Get country by name
 

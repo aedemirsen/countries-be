@@ -46,7 +46,10 @@ public class CountryController {
 
 
     //Get Countries By phone code
-
+    @GetMapping(Api.Country.GET_BY_PHONE_CODE)
+    public List<Country> getCountriesByPhoneCode (@RequestParam(value = "phoneCode", defaultValue = "") String phoneCode) {
+        return countryService.getCountriesByPhoneCode(phoneCode);
+    }
 
     //Get country by name
 
